@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>JS Gallery</title>
+  
+<style>
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 1280px;
+        margin:auto;
+    }
+
+    .gallery img {
+        width: 300px;
+        height: auto;
+        cursor: pointer;
+    }
+</style>
+  
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
+ </head>
+ <body>
+  <div>
+    <div class="gallery">
+        <a href="image1.jpg" data-fancybox="gallery">
+            <img src="image1.jpg" alt="описание изображения 1">
+        </a>
+        <a href="image2.jpg" data-fancybox="gallery">
+            <img src="image2.jpg" alt="описание изображения 2">
+        </a>
+        <a href="image3.jpg" data-fancybox="gallery">
+            <img src="image3.jpg" alt="описание изображения 3">
+        </a>
+        <a href="image4.jpg" data-fancybox="gallery">
+            <img src="image4.jpg" alt="описание изображения 4">
+        </a>
+        <a href="image5.jpg" data-fancybox="gallery">
+            <img src="image5.jpg" alt="описание изображения 5">
+        </a>
+        <a href="image6.jpg" data-fancybox="gallery">
+            <img src="image6.jpg" alt="описание изображения 6">
+        </a>
+        <a href="image7.jpg" data-fancybox="gallery">
+            <img src="image7.jpg" alt="описание изображения 7">
+        </a>
+        <a href="image8.jpg" data-fancybox="gallery">
+            <img src="image8.jpg" alt="описание изображения 8">
+        </a>
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Hash: false,
+        compact: false,
+        contentClick: "toggleCover",
+        wheel : "slide",
+
+        Toolbar: {
+          display: {
+            left: [],
+            middle: [],
+            right: ["close"],
+          },
+        },
+
+        Images: {
+          Panzoom: {
+            panMode: "mousemove",
+            mouseMoveFactor: 1.1,
+            mouseMoveFriction: 0.12
+          },
+        },
+    });    
+  </script>
+ </body>
+</html>

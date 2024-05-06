@@ -1,3 +1,4 @@
 # JSGallery
 Clone repository and open gallery.html
-asasas
+
+test rules 2
